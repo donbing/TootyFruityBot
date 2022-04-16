@@ -11,6 +11,7 @@ mpr121 = adafruit_mpr121.MPR121(i2c)
 pygame.init()
 pygame.mixer.set_num_channels(12)
 
+# todo: make this dynamic
 path = '/home/pi/TootyFruityBot/'
 
 clips = {}
@@ -53,10 +54,10 @@ menu = {
     "1": ("Load", select_sounds_dir),
 }
 for key in sorted(menu.keys()):
-     print(key+":" + menu[key][0])
+     print(key + ":" + menu[key][0])
 
 ans = input("Make A Choice:")
-menu.get(ans,[None, invalid])[1]()
+menu.get(ans, [None, invalid])[1]()
 
 
 # # Use touched_pins to get current state of all pins.
